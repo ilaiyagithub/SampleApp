@@ -1,0 +1,26 @@
+<html>
+<head></head>
+<script src='./tst.js'></script>
+<script src='./utility.js'></script>
+<script>
+    var headval=head([1,3,4]);
+    console.log(headval);
+
+    //safe(() => head(e.target.value.match(/-?(0|([1-9]\d*))(\.\d+)?/)), 0);
+    var val='1344.33';
+
+    var aa = val.match(/-?(0|([1-9]\d*))(\.\d+)?/);
+    headval=head(aa);
+    var saf=safe(val.match(/-?(0|([1-9]\d*))(\.\d+)?/),0);
+    console.log(saf);
+    //
+    saf= safe(() => head(val.match(/-?(0|([1-9]\d*))(\.\d+)?/)), 0);
+    console.log(saf);
+
+    saf= safe(() => head(val.match(/-?(0|([1-9]\d*))(\.\d+)?/)));
+    console.log(saf);
+</script>
+<body>
+
+</body>
+</html>
